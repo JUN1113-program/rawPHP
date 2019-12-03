@@ -29,4 +29,13 @@
   foreach($TeaNames as $tea){
     echo $tea;
   }
-?>
+?>    <!-- クリックするごとに文字が増えるbuttonを設置 -->
+    <button type="button" class="btn btn-primary js-button">0</button>
+    <script type="text/javascript">
+      $(function(){
+        $(".js-button").on("click",function(){
+          let num = Number($(this).text()) + 1;
+          $(this).text(num);
+        })
+      });
+    </script>
